@@ -27,20 +27,47 @@ The next flip-flop need only “recognize” that the first flip-flop’s Q outp
 However, the remaining flip-flops should be made ready to toggle only when all lower-order output bits are “high,” thus the need for AND gates.
 
 **Procedure**
+1. Understand the Counter Behavior
+Inputs:
 
-/* write all the steps invloved */
+clk: Clock signal.
+reset: Resets the counter to 0.
+Output:
+
+count: 4-bit binary value representing the current count.
+Behavior:
+
+On the rising edge of the clock:
+If reset = 1, the counter resets to 0.
+If reset = 0, the counter increments by 1.
+After reaching 1111 (15 in decimal), it wraps around to 0000.
+
+
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
 
-Developed by: RegisterNumber:
-*/
+Developed by:Rajashri I RegisterNumber:24900207
+
+![DE ex11 code](https://github.com/user-attachments/assets/3eca743b-3319-43c9-a5bd-6d1094e16b2c)
+
 
 **RTL LOGIC UP COUNTER**
 
+![DE ex11 diagram](https://github.com/user-attachments/assets/d856640e-0da5-42c7-8285-46e74f983c59)
+
+
 **TIMING DIAGRAM FOR IP COUNTER**
+
+![DE ex11 waveform](https://github.com/user-attachments/assets/d372efa8-51c5-4bf1-a4f3-a5fe8ce14f6c)
+
 
 **TRUTH TABLE**
 
+![4 bit counter](https://github.com/user-attachments/assets/e6ee4fde-bc6d-47db-9323-ee7c85742fcf)
+
+
 **RESULTS**
+
+The implementation of 4 bit synchronous up counter and validate functionality.
+
